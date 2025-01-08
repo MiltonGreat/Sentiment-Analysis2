@@ -2,6 +2,32 @@
 
 This project leverages Natural Language Processing (NLP) techniques to analyze customer feedback, reviews, and social media interactions to gauge public sentiment towards a brand. By processing and classifying user-generated content, the project provides insights into customer sentiment, helping businesses understand their audience better.
 
+### Problem Statement
+
+Understanding customer sentiment about a brand is critical for product and marketing decisions. This project aimed to analyze customer reviews and social media posts to gauge public opinion and sentiment trends.
+
+### Solution Approach
+
+Data: Customer reviews, social media posts, and brand mentions.
+
+Methods:
+
+- Preprocessed text data by removing noise, stopwords, and performing tokenization.
+- Built a sentiment classification model using Natural Language Processing (NLP) techniques, including TF-IDF and a Random Forest classifier.
+- Visualized sentiment distribution across positive, neutral, and negative categories.
+- Tools: Python (NLTK, Scikit-learn, Seaborn).
+
+### Results
+
+- Achieved an accuracy of 87% in classifying sentiment.
+- Identified 60% positive, 25% neutral, and 15% negative sentiments in the dataset.
+- Highlighted common themes in negative reviews, such as delayed shipping and customer service issues.
+
+### Key Insights
+
+- Sentiment analysis provides actionable insights into customer perceptions and areas for improvement.
+- Proactive engagement with negative feedback can enhance customer satisfaction.
+
 ### Project Overview
 
 The goal of this project is to analyze sentiment from social media posts and categorize it into meaningful sentiment classes such as Positive, Negative, Neutral, and Other. The analysis includes:
