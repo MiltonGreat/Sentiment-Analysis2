@@ -2,32 +2,6 @@
 
 This project leverages Natural Language Processing (NLP) techniques to analyze customer feedback, reviews, and social media interactions to gauge public sentiment towards a brand. By processing and classifying user-generated content, the project provides insights into customer sentiment, helping businesses understand their audience better.
 
-### Problem Statement
-
-Understanding customer sentiment about a brand is critical for product and marketing decisions. This project aimed to analyze customer reviews and social media posts to gauge public opinion and sentiment trends.
-
-### Solution Approach
-
-Data: Customer reviews, social media posts, and brand mentions.
-
-Methods:
-
-- Preprocessed text data by removing noise, stopwords, and performing tokenization.
-- Built a sentiment classification model using Natural Language Processing (NLP) techniques, including TF-IDF and a Random Forest classifier.
-- Visualized sentiment distribution across positive, neutral, and negative categories.
-- Tools: Python (NLTK, Scikit-learn, Seaborn).
-
-### Results
-
-- Achieved an accuracy of 87% in classifying sentiment.
-- Identified 60% positive, 25% neutral, and 15% negative sentiments in the dataset.
-- Highlighted common themes in negative reviews, such as delayed shipping and customer service issues.
-
-### Key Insights
-
-- Sentiment analysis provides actionable insights into customer perceptions and areas for improvement.
-- Proactive engagement with negative feedback can enhance customer satisfaction.
-
 ### Project Overview
 
 The goal of this project is to analyze sentiment from social media posts and categorize it into meaningful sentiment classes such as Positive, Negative, Neutral, and Other. The analysis includes:
@@ -52,7 +26,17 @@ The dataset, sentimentdataset.csv, contains user-generated content from various 
 - Country:	Country of origin for the post.
 - Year, Month, Day, Hour:	Date components extracted from Timestamp.
 
-### Features and Techniques
+The dataset consists of social media posts that have been labeled for sentiment as one of three categories:
+
+- Positive
+- Neutral
+- Negative
+
+### Problem Statement
+
+Understanding customer sentiment about a brand is critical for product and marketing decisions. This project aimed to analyze customer reviews and social media posts to gauge public opinion and sentiment trends.
+
+### Solution Approach
 
 1. Data Preprocessing
 - Text Cleaning: Removed URLs, mentions, hashtags, punctuation, and stopwords.
@@ -70,31 +54,40 @@ The dataset, sentimentdataset.csv, contains user-generated content from various 
 - Confusion matrix
 - Cross-validation accuracy
 
-4. Model Deployment
-- Saved the trained model and vectorizer using pickle for future use.
-
-### Visualizations
-- Sentiment Distribution: Visualized the count of posts across different sentiment categories.
-- Sentiment Trends Over Time: Line plots showing how sentiment varies with time.
-- Hashtag WordCloud: A word cloud representing the most frequently used hashtags.
-
 ### Results
 
-- The sentiment classification model achieved balanced performance on multiple classes, leveraging simplified sentiment categories.
-- The model provides actionable insights into customer sentiment trends, enabling brands to better understand their audience.
+After training the Logistic Regression model, the following results were obtained on the test set:
 
-### Key Insights
+Classification Report:
+- Negative: Precision = 0.85, Recall = 0.82, F1-Score = 0.83
+- Neutral: Precision = 0.64, Recall = 0.54, F1-Score = 0.59
+- Positive: Precision = 0.62, Recall = 0.75, F1-Score = 0.68
 
-- Sentiment analysis provides valuable insights into customer behavior and brand perception.
-- Simplified sentiment categories enable actionable insights, especially when dealing with complex datasets.
-- Visualizations like word clouds and time-series plots help uncover trends and patterns in customer sentiment.
+Accuracy: 0.70
+
+Confusion Matrix: The confusion matrix has been visualized to show the model's predictions vs actual labels for each sentiment category.
+
+Class Distribution Before and After SMOTE:
+- Class distribution was highly imbalanced in the original training set:
+    - Negative: 153 instances
+    - Neutral: 201 instances
+    - Positive: 231 instances
+
+After applying SMOTE, the training data was balanced with an equal number of samples across all classes:
+    - Negative: 231 instances
+    - Neutral: 231 instances
+    - Positive: 231 instances
 
 ### Future Work
 
-- Improve label diversity by balancing underrepresented classes in the dataset.
-- Explore advanced NLP techniques like BERT or Transformers for better sentiment classification.
-- Implement a dashboard for real-time sentiment analysis and trend tracking.
-- Integrate additional features like user engagement metrics for enhanced predictions.
+1. Hyperparameter Tuning:
+- Further tune the Logistic Regression model using grid search or random search for optimal hyperparameters.
+
+2. Model Comparison:
+- Try other machine learning models such as Random Forest, Support Vector Machine (SVM), or XGBoost and compare performance.
+
+3. Further Text Preprocessing:
+- Experiment with more advanced text preprocessing steps, such as using Word2Vec or BERT embeddings for feature extraction.
 
 ### Source
 
