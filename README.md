@@ -1,5 +1,7 @@
 # Sentiment Analysis from Text Data
 
+p![wordcloud](https://github.com/user-attachments/assets/3841b49c-6b11-45b3-a88a-eea613e1df4c)
+
 This project aims to automate sentiment classification from text data, such as social media interactions, customer reviews, and feedback, to help businesses gain insights into public opinion. By leveraging machine learning, we classify text into Positive, Neutral, and Negative sentiments, enabling companies to track customer emotions, identify trends, and improve engagement strategies.
 
 ### Objectives
